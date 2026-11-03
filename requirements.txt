@@ -1,0 +1,7 @@
+# Starter dependencies. Install in a virtual environment.
+# After testing your implementation, replace these with the exact versions you used.
+langgraph
+langchain-openai
+langgraph-checkpoint-sqlite
+python-dotenv
+pytest
