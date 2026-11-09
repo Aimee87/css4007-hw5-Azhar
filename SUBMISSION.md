@@ -41,10 +41,10 @@ Compile = make the graph ready to run.
 
 | Message | Predicted route | Actual route | What I learned |
 | --- | --- | --- | --- |
-| I cannot connect to Wi-Fi. | | | |
-| I forgot my PASSWORD. | | | |
-| My laptop screen is broken. | | | |
-| My Wi-Fi password does not work. | | | |
+| I cannot connect to Wi-Fi. |START → read_request → wifi_help → END|START → read_request → wifi_help → END|The graph correctly found a Wi‑Fi problem.|
+| I forgot my PASSWORD. |START → read_request → password_help → END|START → read_request → password_help → END|The graph correctly found a password problem.|
+| My laptop screen is broken. |START → read_request → other_help → END|START → read_request → other_help → END|The graph sent an unknown problem to other_help.|
+| My Wi-Fi password does not work. |START → read_request → wifi_help → END|START → read_request → wifi_help → END|The graph selected Wi‑Fi because Wi‑Fi was checked first.|
 
 ### My change to the graph
 
