@@ -59,8 +59,40 @@ Compile = make the graph ready to run.
 | My Wi-Fi password does not work. |START → read_request → wifi_help → END|START → read_request → wifi_help → END|The graph selected Wi‑Fi because Wi‑Fi was checked first.|
 
 ### My change to the graph
+### Updated graph
+START
 
-TODO: draw the graph with clarify_problem, show the new trace, and explain the difference. What does LangGraph control, and what do my functions decide?
+
+  |
+
+read_request
+
+  |
+  
+  +--> wifi_help ------> END
+  
+  |
+  
+  +--> password_help --> END
+  
+  |
+  
+  +--> other_help -----> END
+  
+  |
+  
+  +--> clarify_problem -> END
+  
+### New trace
+Input: My Wi‑Fi password does not work.
+
+Route: START → read_request → clarify_problem → END
+
+Before, messages containing both Wi‑Fi and password were sent to wifi_help. Now, messages containing both topics are sent to clarify_problem, which asks the user which problem should be solved first.
+
+LangGraph controls the workflow and chooses which node runs next.
+
+My functions decide the category of the request and create the response.
 
 ## Part 2 — Model and tools
 
