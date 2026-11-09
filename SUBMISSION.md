@@ -3,8 +3,39 @@
 ## Part 1 — How the graph works
 
 ### My graph and state
+First graph
+START
+  |
+read_request
+  |
+  +--> wifi_help ------> END
+  |
+  +--> password_help --> END
+  |
+  +--> other_help -----> END
 
-TODO: draw the first graph and explain what each node reads and changes. Answer the four state and routing questions in the brief.
+State
+message  - user message
+category - request category
+reply    - bot response
+
+1) read_request reads the message and sets the category.
+
+wifi_help creates a Wi‑Fi response.
+
+password_help creates a password response.
+
+other_help asks a question.
+
+2) A node changes the state. A conditional edge chooses the next node.
+
+3) The next node receives the current graph state.
+
+4) START = beginning of the graph.
+
+END = end of the graph.
+
+Compile = make the graph ready to run.
 
 ### Predictions before running
 
