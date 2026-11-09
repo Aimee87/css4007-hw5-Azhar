@@ -3,20 +3,32 @@
 ## Part 1 — How the graph works
 
 ### My graph and state
-First graph
+### First graph
+
 START
+
   |
+
 read_request
+
   |
+  
   +--> wifi_help ------> END
+  
   |
+  
   +--> password_help --> END
+  
   |
+  
   +--> other_help -----> END
 
-State
+### State
+
 message  - user message
+
 category - request category
+
 reply    - bot response
 
 1) read_request reads the message and sets the category.
