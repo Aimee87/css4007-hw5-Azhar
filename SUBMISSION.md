@@ -95,8 +95,62 @@ LangGraph controls the workflow and chooses which node runs next.
 My functions decide the category of the request and create the response.
 
 ## Part 2 — Model and tools
+### Model / Tool Loop
 
-TODO: draw the model/tool loop. Answer the four questions in the brief. Record the model and provider, direct calls to each tool, and one actual run that uses multiple tools. Explain the loop limit.
+User
+
+  |
+  
+
+Model
+
+  |
+
+Tool
+
+  |
+
+Tool Result
+
+  |
+
+Model
+
+  |
+
+Answer
+
+1) The graph checks the model output. If the model requests a tool, the graph runs the tool. Otherwise, the graph returns the final answer.
+2) The model requests the tool. The tool node executes the tool and returns the result.
+3) The tool result is added to the state. The model can use it to generate the final answer.
+4) Part 1 used fixed routing rules. Part 2 allows the model to choose which tool to use.
+
+Provider: Google Gemini
+
+Model: gemini-3.5-flash
+
+### Direct Tool Calls
+find_instructions_tool → password instructions
+
+check_service_status_tool → operational
+
+prepare_ticket_tool → ticket draft created
+
+### User Request
+1) Wi‑Fi still does not work after I followed the instructions.
+2) Is it down? If it is working, help me prepare a ticket.
+
+Tool 1: check_service_status_tool
+Result: operational
+
+Tool 2: prepare_ticket_tool
+Result: ticket draft created
+
+Final Answer:
+The Wi‑Fi service is operational. A ticket draft was prepared.
+
+### Loop Limit
+A loop limit was not implemented in the current prototype. In a complete version, a maximum number of tool calls (for example, 5) would be used to prevent infinite loops.
 
 ## Part 3 — Memory
 
