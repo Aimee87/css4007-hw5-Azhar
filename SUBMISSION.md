@@ -207,11 +207,11 @@ A limitation of the current prototype is that the memory and user preference sys
 
 | Scenario | Command or manual steps | Log file | What happened / what I changed |
 | --- | --- | --- | --- |
-| S01 — Simple Wi-Fi route | | | |
-| S02 — Case-insensitive password route | | | |
-| S03 — Unsupported request | | | |
-| S04 — Two topics before the graph change | | | |
-| S05 — Two topics after adding clarification | | | |
+| S01 — Simple Wi-Fi route |Tested: I cannot connect to Wi‑Fi|part1.ipynb|Routed to wifi_help and returned Wi‑Fi instructions.|
+| S02 — Case-insensitive password route |Tested: I forgot my PASSWORD|part1.ipynb|Routed to password_help and returned password instructions|
+| S03 — Unsupported request |Tested: My laptop screen is broken|part1.ipynb|Routed to other_help|
+| S04 — Two topics before the graph change |Tested: My Wi‑Fi password does not work|part1.ipynb|Routed to wifi_help because Wi‑Fi was checked first|
+| S05 — Two topics after adding clarification |Tested: My Wi‑Fi password does not work|part1.ipynb|Routed to clarify_problem|
 | S06 — Instructions then local ticket | | | |
 | S07 — The same request during a Wi-Fi outage | | | |
 | S08 — Status source unavailable | | | |
