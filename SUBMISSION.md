@@ -170,6 +170,10 @@ user_id identifies the user and stores preferences that can be used across diffe
 | Same user, new conversation |user_memory.json + thread_id|user_memory.json|Language preference remained available, while the conversation was a new thread.|
 | Different user |user_memory.get("demo-user-b")|user_memory.json|No saved preference was found for the new user.|
 
+Wi‑Fi instructions are retrieval because they are read from helpdesk.json.
+
+Language preference is memory because it was saved from a previous conversation.
+
 ## Part 4 — Running and checking my work
 
 TODO: point to the README setup steps, package versions, memory-reset instructions, tests and GitHub Actions workflow. Explain which mistake each test catches and which runs use a fake model.
