@@ -176,11 +176,32 @@ Language preference is memory because it was saved from a previous conversation.
 
 ## Part 4 — Running and checking my work
 
-TODO: point to the README setup steps, package versions, memory-reset instructions, tests and GitHub Actions workflow. Explain which mistake each test catches and which runs use a fake model.
+The README contains installation steps, API key setup, package versions, and run instructions.
+
+Conversation memory is stored in memory.db, and user preferences are stored in user_memory.json.
+
+To reset the application, these files can be deleted.
+
+The tests check:
+
+routing
+
+tools
+
+memory after restart
+
+separation between users and conversations
+
+These tests help find routing errors, tool failures, memory problems, and user data sharing issues.
+
+A fake model can be used in tests, so a real API key is not required.
 
 ## Choices and limitations
+I used LangGraph for workflow management, Gemini 3.5 Flash as the model, SqliteSaver for conversation memory, and JSON files for helpdesk data and user preferences.
 
-TODO: explain the storage and libraries I chose, why they fit this task, and what still does not work reliably.
+These tools fit the task because they support routing, tool calling, and memory persistence.
+
+A limitation of the current prototype is that the memory and user preference system is simplified and was implemented for demonstration purposes.
 
 ## Supplied scenarios — my actual results
 
