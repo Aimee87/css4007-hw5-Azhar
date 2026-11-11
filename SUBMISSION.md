@@ -153,8 +153,18 @@ The Wi‑Fi service is operational. A ticket draft was prepared.
 A loop limit was not implemented in the current prototype. In a complete version, a maximum number of tool calls (for example, 5) would be used to prevent infinite loops.
 
 ## Part 3 — Memory
+### Conversation Memory
+Conversation memory stores the current conversation, previous messages, and steps already tried. I used SqliteSaver and saved the conversation state in memory.db.
 
-TODO: explain conversation state, thread_id, user identifier, user preference storage, and retrieval from helpdesk.json.
+### User Memory
+User memory stores user preferences. In my implementation, the user's preferred language is saved in user_memory.json. The saved preference remains available in future conversations for the same user.
+
+thread_id identifies a specific conversation. One user can have multiple conversations, and each conversation has its own history. 
+
+user_id identifies the user and stores preferences that can be used across different conversations.
+
+
+
 
 | Situation | Command used | Log file | What happened |
 | --- | --- | --- | --- |
