@@ -211,7 +211,7 @@ A limitation of the current prototype is that the memory and user preference sys
 | S02 — Case-insensitive password route |Tested: I forgot my PASSWORD|part1.ipynb|Routed to password_help and returned password instructions|
 | S03 — Unsupported request |Tested: My laptop screen is broken|part1.ipynb|Routed to other_help|
 | S04 — Two topics before the graph change |Tested: My Wi‑Fi password does not work|part1.ipynb|Routed to wifi_help because Wi‑Fi was checked first|
-| S05 — Two topics after adding clarification |Tested: My Wi‑Fi password does not work|part1.ipynb|Routed to clarify_problem|
+| S05 — Two topics after adding clarification |Tested: My Wi‑Fi password does not work|part1.ipynb|Routed to clarify_problem and asked the user which issue should be solved first|
 | S06 — Instructions then local ticket | | | |
 | S07 — The same request during a Wi-Fi outage | | | |
 | S08 — Status source unavailable | | | |
