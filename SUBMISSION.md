@@ -207,17 +207,17 @@ A limitation of the current prototype is that the memory and user preference sys
 
 | Scenario | Command or manual steps | Log file | What happened / what I changed |
 | --- | --- | --- | --- |
-| S01 — Simple Wi-Fi route |Tested: I cannot connect to Wi‑Fi|part1.ipynb|Routed to wifi_help and returned Wi‑Fi instructions.|
-| S02 — Case-insensitive password route |Tested: I forgot my PASSWORD|part1.ipynb|Routed to password_help and returned password instructions|
-| S03 — Unsupported request |Tested: My laptop screen is broken|part1.ipynb|Routed to other_help|
-| S04 — Two topics before the graph change |Tested: My Wi‑Fi password does not work|part1.ipynb|Routed to wifi_help because Wi‑Fi was checked first|
-| S05 — Two topics after adding clarification |Tested: My Wi‑Fi password does not work|part1.ipynb|Routed to clarify_problem and asked the user which issue should be solved first|
-| S06 — Instructions then local ticket | | | |
-| S07 — The same request during a Wi-Fi outage | | | |
-| S08 — Status source unavailable | | | |
-| S09 — Missing ticket details | | | |
-| S10 — Use the current conversation | | | |
-| S11 — Persist and recall after restart | | | |
-| S12 — Preference across threads without replay | | | |
-| S13 — Do not share memory between users | | | |
-| S14 — Password recovery outage | | | |
+| S01 — Simple Wi-Fi route |Tested: I cannot connect to Wi‑Fi|outputs/S01.txt|Routed to wifi_help and returned Wi‑Fi instructions|
+| S02 — Case-insensitive password route |Tested: I forgot my PASSWORD|outputs/S02.txt|Routed to password_help and returned password instructions|
+| S03 — Unsupported request |Tested: My laptop screen is broken|outputs/S03.txt|Routed to other_help|
+| S04 — Two topics before the graph change |Tested: My Wi‑Fi password does not work|outputs/S04.txt|Routed to wifi_help because Wi‑Fi was checked first|
+| S05 — Two topics after adding clarification |Tested: My Wi‑Fi password does not work|outputs/S05.txt|Routed to clarify_problem and asked the user which issue should be solved first|
+| S06 — Instructions then local ticket |Tested Wi‑Fi instructions and ticket workflow|outputs/S06.txt|Instructions were retrieved, Wi‑Fi status was operational, and a ticket draft was prepared|
+| S07 — The same request during a Wi-Fi outage |Tested using the wifi_outage profile|outputs/S07.txt|The Wi‑Fi service was reported as unavailable and no ticket draft was prepared|
+| S08 — Status source unavailable |Tested using the status_unavailable profile|outputs/S08.txt|The service status could not be determined|
+| S09 — Missing ticket details |Tested support ticket creation after providing details|outputs/S09.txt|A ticket draft was prepared after the issue details were supplied|
+| S10 — Use the current conversation |Tested conversation recall in the same thread|outputs/S10.txt|Previous troubleshooting steps were recalled from conversation memory|
+| S11 — Persist and recall after restart |Tested memory persistence after restart|outputs/S11.txt|Conversation state was loaded after restart and earlier discussion was recalled|
+| S12 — Preference across threads without replay |Tested user preference recall in a new thread|outputs/S12.txt|The saved Kazakh language preference was recalled from user memory|
+| S13 — Do not share memory between users |Tested memory isolation between users|outputs/S13.txt|No language preference or previous issue was shared with another user|
+| S14 — Password recovery outage |Tested account recovery status check|outputs/S14.txt|The account recovery service outage was detected and reported|
