@@ -163,15 +163,12 @@ thread_id identifies a specific conversation. One user can have multiple convers
 
 user_id identifies the user and stores preferences that can be used across different conversations.
 
-
-
-
 | Situation | Command used | Log file | What happened |
 | --- | --- | --- | --- |
-| Refer to an earlier message | | | |
-| Close, restart and resume | | | |
-| Same user, new conversation | | | |
-| Different user | | | |
+| Refer to an earlier message |get_state(thread-1)|memory.db|Previous conversation state was loaded from memory.|
+| Close, restart and resume |SqliteSaver + memory.db|memory.db|Conversation state remained available after restart.|
+| Same user, new conversation |user_memory.json + thread_id|user_memory.json|Language preference remained available, while the conversation was a new thread.|
+| Different user |user_memory.get("demo-user-b")|user_memory.json|No saved preference was found for the new user.|
 
 ## Part 4 — Running and checking my work
 
