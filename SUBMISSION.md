@@ -150,7 +150,7 @@ Final Answer:
 The Wi‑Fi service is operational. A ticket draft was prepared.
 
 ### Loop Limit
-A loop limit was not implemented in the current prototype. In a complete version, a maximum number of tool calls (for example, 5) would be used to prevent infinite loops.
+The prototype demonstrates the model-tool loop. A loop limit can be added to prevent infinite iterations.
 
 ## Part 3 — Memory
 ### Conversation Memory
